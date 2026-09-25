@@ -10,10 +10,17 @@ const PROJECTS = {
       ["Planning response","The proposals include an integrated bus transit network, bus-priority corridors, multimodal hubs, integrated ticketing and fare-system improvements, and a pedestrian safety framework with an implementation strategy."]
     ],
     gallery:[
-      "assets/thesis/mobility-network-map.jpg",
-      "assets/thesis/zone-analysis-accessibility-availability.jpg",
-      "assets/thesis/zone-analysis-affordability-safety.jpg",
-      "assets/thesis/bus-network-map.jpg"
+      "assets/thesis/existing-mobility-network-map.png",
+      "assets/thesis/analytical-zones-map.png",
+      "assets/thesis/accessibility-analysis-map.png",
+      "assets/thesis/proposed-bus-network-map.png"
+    ],
+    galleryTitle:"Selected maps",
+    galleryLabels:[
+      "Existing mobility network",
+      "Analytical zones",
+      "Accessibility analysis",
+      "Proposed bus transit network"
     ],
     allSheets:Array.from({length:20},(_,i)=>`assets/thesis-sheets/sheet-${String(i+1).padStart(2,"0")}.jpg`)
   },
@@ -144,7 +151,7 @@ function openProject(key){
       <div class="process">${d.process.map((p,i)=>`<div><strong>0${i+1}</strong><span>${esc(p)}</span></div>`).join("")}</div>
     </div>
     ${d.sections.map(s=>`<div class="modal-section"><h3>${esc(s[0])}</h3><div class="text-columns"><p>${esc(s[1])}</p></div></div>`).join("")}
-    ${d.gallery?.length?`<div class="modal-section"><div class="section-line"><h3>Selected visuals</h3>${d.allSheets?.length?`<button class="sheet-toggle" type="button" data-sheet-toggle>View all ${d.allSheets.length} thesis sheets <span>＋</span></button>`:""}</div><div class="gallery ${d.gallery.length===1?"one":""}">${d.gallery.map((src,i)=>`<figure class="visual-card"><img src="${src}" alt="${esc(d.title)} visual ${i+1}" loading="lazy" data-lightbox="${src}"></figure>`).join("")}</div>${d.allSheets?.length?`<div class="sheet-grid" data-sheet-grid aria-hidden="true">${d.allSheets.map((src,i)=>`<figure class="sheet-card"><button type="button" data-lightbox="${src}" aria-label="Open thesis sheet ${i+1}"><img src="${src}" alt="Thesis sheet ${i+1}" loading="lazy"><span class="sheet-number">Sheet ${String(i+1).padStart(2,"0")}</span></button></figure>`).join("")}</div>`:""}</div>`:""}
+    ${d.gallery?.length?`<div class="modal-section"><div class="section-line"><h3>${esc(d.galleryTitle||"Selected visuals")}</h3>${d.allSheets?.length?`<button class="sheet-toggle" type="button" data-sheet-toggle aria-expanded="false">View all ${d.allSheets.length} thesis sheets <span>＋</span></button>`:""}</div><div class="gallery ${d.gallery.length===1?"one":""}">${d.gallery.map((src,i)=>`<figure class="visual-card"><button type="button" class="visual-open" data-lightbox="${src}" aria-label="Open ${esc(d.galleryLabels?.[i]||`${d.title} visual ${i+1}`)}"><img src="${src}" alt="${esc(d.galleryLabels?.[i]||`${d.title} visual ${i+1}`)}" loading="lazy">${d.galleryLabels?.[i]?`<figcaption>${esc(d.galleryLabels[i])}</figcaption>`:""}</button></figure>`).join("")}</div>${d.allSheets?.length?`<div class="sheet-grid" data-sheet-grid aria-hidden="true">${d.allSheets.map((src,i)=>`<figure class="sheet-card"><button type="button" data-lightbox="${src}" aria-label="Open thesis sheet ${i+1}"><img src="${src}" alt="Thesis sheet ${i+1}" loading="lazy"><span class="sheet-number">Sheet ${String(i+1).padStart(2,"0")}</span></button></figure>`).join("")}</div>`:""}</div>`:""}
     ${d.paper?`<div class="modal-section"><h3>Full paper</h3><div class="paper-pages">${Array.from({length:7},(_,i)=>`<img src="assets/publication-paper/page-${String(i+1).padStart(2,"0")}.jpg" alt="Published paper page ${i+1}" loading="lazy" data-lightbox="assets/publication-paper/page-${String(i+1).padStart(2,"0")}.jpg">`).join("")}</div></div>`:""}
   `;
   modal.classList.add("open");modal.setAttribute("aria-hidden","false");document.body.classList.add("modal-open");
