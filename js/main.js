@@ -10,8 +10,12 @@ const PROJECTS = {
       ["Planning response","The proposals include an integrated bus transit network, bus-priority corridors, multimodal hubs, integrated ticketing and fare-system improvements, and a pedestrian safety framework with an implementation strategy."]
     ],
     gallery:[
-      "assets/thesis/slide-05.jpg","assets/thesis/slide-06.jpg","assets/thesis/slide-07.jpg",
-      "assets/thesis/slide-08.jpg","assets/thesis/slide-09.jpg","assets/thesis/slide-10.jpg"
+      "assets/thesis/mobility-network-map.jpg",
+      "assets/thesis/zone-analysis-accessibility-availability.jpg",
+      "assets/thesis/zone-analysis-affordability-safety.jpg",
+      "assets/thesis/bus-network-map.jpg",
+      "assets/thesis-sheets/sheet-18.jpg",
+      "assets/thesis-sheets/sheet-19.jpg"
     ]
   },
   paper:{
@@ -66,10 +70,7 @@ const PROJECTS = {
       ["My contribution","Studied the land-use and employment/economy sectors, assessed their strengths, weaknesses and potential, applied PAPRIKA-based scoring with the group, and contributed to project formulation for resilient development."],
       ["Project context","The wider group project addressed integrated urban growth and resilience. This portfolio entry deliberately distinguishes my contribution from the complete group output."]
     ],
-    gallery:[
-      "assets/studio2/sheet-01.jpg","assets/studio2/sheet-02.jpg","assets/studio2/sheet-03.jpg",
-      "assets/studio2/sheet-05.jpg"
-    ]
+    gallery:[]
   },
   corridor:{
     kicker:"M.Plan Semester 2 · Group Planning Project",
@@ -93,7 +94,8 @@ const PROJECTS = {
       ["Systems explored","The project combined spatial planning, recovery sequencing, infrastructure systems, IoT sensing, communication networks and AI-assisted decision support."]
     ],
     gallery:[
-      "assets/studio2/sheet-04.jpg","assets/studio2/sheet-05.jpg","assets/studio2/sheet-01.jpg"
+      "assets/studio2/sheet-01.jpg","assets/studio2/sheet-02.jpg","assets/studio2/sheet-03.jpg",
+      "assets/studio2/sheet-04.jpg","assets/studio2/sheet-05.jpg"
     ]
   },
   smart:{

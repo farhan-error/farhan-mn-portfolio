@@ -190,3 +190,5 @@ button{cursor:pointer}
   .footer-inner{flex-direction:column}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+
+.education-list{display:grid;gap:16px}.education-item{padding-bottom:14px;border-bottom:1px solid var(--line)}.education-item:last-child{padding-bottom:0;border-bottom:0}.education-item strong{display:block;font:500 1.1rem/1.15 var(--serif)}.education-item small{display:block;margin-top:4px;color:var(--muted);font-size:.74rem;font-weight:400}
